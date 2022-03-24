@@ -5,5 +5,5 @@ channels:
 dependencies:
   - geopandas
   - plotly
-  - streamlit
+  - streamlit=1.7.0
 prefix: C:\Users\david\Anaconda3\envs\datathon2022
