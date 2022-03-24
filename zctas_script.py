@@ -6,10 +6,10 @@ import geopandas as gpd
 import streamlit as st
 
 # %%
-zctas = gpd.read_file('./data/montgomery_zip_vars.geojson')
+zctas = gpd.read_file('./data/eldernet_big_combined.geojson')
 
 # %%
-zctas.set_index('GEOID', inplace = True)
+zctas.set_index('NAME', inplace = True)
 
 # %%
 # zctas.plot()
@@ -31,10 +31,10 @@ fig = px.choropleth_mapbox(zctas,
     geojson=zctas.geometry,
     locations=zctas.index, 
     color=selected_col,
-    center={"lat": 40.1718, "lon": -75.3175},
+    center={"lat": 40.1369, "lon": -75.5248},
     opacity=selected_opacity,
     mapbox_style="open-street-map",
-    zoom=8.9
+    zoom=8.1
     )
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 # fig.show()
