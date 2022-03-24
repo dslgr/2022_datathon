@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - geopandas
-  - plotly
   - streamlit=1.7.0
+  - plotly
+  - geopandas
 prefix: C:\Users\david\Anaconda3\envs\datathon2022
