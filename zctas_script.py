@@ -14,11 +14,13 @@ zctas.set_index('NAME', inplace = True)
 
 # %%
 # columns = zctas.columns
-selectable_cols = ['tot_popE', 'hispanicE', 'nh_whiteE', 'nh_blackE', 'nh_aianE',
-       'nh_asianE', 'nh_pacislanderE', 'non_citizenE', 'hispanicE_share',
-       'nh_whiteE_share', 'nh_blackE_share', 'nh_aianE_share',
-       'nh_asianE_share', 'nh_pacislanderE_share', 'non_citizenE_share',
-       'over55', 'disability_est', 'mhi']
+selectable_cols = ['tot_popE', 'hispanicE', 'nh_whiteE', 'nh_blackE',
+       'nh_aianE', 'nh_asianE', 'nh_pacislanderE', 'non_citizenE',
+       'hispanicE_share', 'nh_whiteE_share', 'nh_blackE_share',
+       'nh_aianE_share', 'nh_asianE_share', 'nh_pacislanderE_share',
+       'non_citizenE_share', 'over55', 'disability_est', 'mhi', 'Total', 'CM',
+       'Pantry', 'Volunteer', 'Area', 'service_dummy', 'over55_share',
+       'disabled_share', 'over55_z', 'disabled_z', 'service_cat']
 selected_col = st.selectbox('Demographic', selectable_cols)
 
 opacities = [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
