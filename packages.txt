@@ -1,4 +1,1 @@
-build-essential
-python3-dev
 gdal-bin
-python-rtree
