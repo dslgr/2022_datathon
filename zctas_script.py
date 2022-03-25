@@ -13,6 +13,7 @@ zctas.set_index('NAME', inplace = True)
 # zctas.plot()
 
 # %%
+st.set_page_config(layout='wide')
 # columns = zctas.columns
 selectable_cols = ['tot_popE', 'hispanicE', 'nh_whiteE', 'nh_blackE',
        'nh_aianE', 'nh_asianE', 'nh_pacislanderE', 'non_citizenE',
