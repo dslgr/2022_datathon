@@ -45,6 +45,10 @@ zctas.set_index('NAME', inplace = True)
 # zctas.plot()
 
 # %%
+st.title('Geographic visualization for Eldernet')
+st.text('Census data utilized is estimated by the census')
+
+# %%
 st.set_page_config(layout='wide')
 columns = zctas.columns
 selectable_cols = [
