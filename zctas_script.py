@@ -55,7 +55,7 @@ selectable_cols = [
     'tot_AmInd',
     'tot_asian',
     'tot_pac_islander',
-    'tot_non_citizen'
+    'tot_non_citizen',
     'hispanic_share',
     'white_share',
     'black_share',
@@ -66,14 +66,14 @@ selectable_cols = [
     'tot_over55',
     'tot_disability',
     'median_household_income',
-    'tot_E_clients'
+    'tot_E_clients',
     'E_Care_Mgmt',
     'E_Pantry',
     'E_Volunteer',
-    'over55_share'
+    'over55_share',
     'disability_share',
     'over55_zscore',
-    'disability_zscore'
+    'disability_zscore',
     'E_serviced_zip'
 ]
 selected_col = st.selectbox('Census/Eldernet data', selectable_cols)
