@@ -7,6 +7,7 @@ import streamlit as st
 zctas = gpd.read_file("./data/eldernet_big_combined.geojson")
 
 # %%
+# renaming columns to be more understandable
 rename_cols = {
     "tot_popE": "tot_population",
     "hispanicE": "tot_hispanic",
@@ -39,18 +40,21 @@ rename_cols = {
 zctas.rename(rename_cols, axis="columns", inplace=True)
 
 # %%
+# not sure but the identifier needed on the over tooltip may need to be the index
 zctas.set_index("NAME", inplace=True)
 
 # %%
 # zctas.plot()
 
 # %%
+# auto set the elements to full width
 st.set_page_config(layout="wide")
 st.title("Geographic visualization for Eldernet")
 st.text("Census data utilized is estimated by the census")
 
 # %%
-columns = zctas.columns
+# columns = zctas.columns
+# set which columns can be selected
 selectable_cols = [
     "tot_population",
     "tot_hispanic",
@@ -82,6 +86,7 @@ selectable_cols = [
 ]
 selected_col = st.selectbox("Census/Eldernet data", selectable_cols)
 
+# the default opacity of 0.6 should be but making it changable
 opacities = [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
 selected_opacity = st.selectbox("Opacity", opacities, index=2)
 
@@ -100,4 +105,5 @@ fig.update_layout(margin={"r": 0, "t": 0, "l": 0, "b": 0})
 # fig.show()
 
 # %%
+# display the chart
 st.plotly_chart(fig, use_container_width=True)
